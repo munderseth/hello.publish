@@ -4,3 +4,5 @@ Example showing how to publish CI/Automation to Testspace using:
 - [Testspace client](https://help.testspace.com/docs/reference/testspace-client)
 
 More details of this sample can be found in the Testspace [Help Tutorial](https://help.testspace.com/docs/tutorial/getting-started) section.
+
+Force
