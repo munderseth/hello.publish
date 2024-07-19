@@ -1,7 +1,5 @@
 name: Jobs
 on: 
-  push:
-  pull_request:
   workflow_dispatch:
     inputs:
       domain:
@@ -35,7 +33,7 @@ jobs:
       - name: Testspace client install & config
         uses: testspace-com/setup-testspace@v1
         with:
-          domain: ${{github.repository_owner}}
+          domain: ${{github.repository_owner}}.${{ inputs.domain}}
       - name: Testspace push test content
         run: testspace "[${{ github.workflow }}/${{ github.job }}]./testcontent/*.xml"
   job4:
@@ -45,7 +43,7 @@ jobs:
       - name: Testspace client install & config
         uses: testspace-com/setup-testspace@v1
         with:
-          domain: ${{github.repository_owner}}
+          domain: ${{github.repository_owner}}.${{ inputs.domain}}
       - name: Testspace push test content
         run: testspace "[${{ github.workflow }}/${{ github.job }}]./testcontent/*.xml"
   job5:
@@ -55,7 +53,7 @@ jobs:
       - name: Testspace client install & config
         uses: testspace-com/setup-testspace@v1
         with:
-          domain: ${{github.repository_owner}}
+          domain: ${{github.repository_owner}}.${{ inputs.domain}}
       - name: Testspace push test content
         run: testspace "[${{ github.workflow }}/${{ github.job }}]./testcontent/*.xml"
   job6:
@@ -65,7 +63,7 @@ jobs:
       - name: Testspace client install & config
         uses: testspace-com/setup-testspace@v1
         with:
-          domain: ${{github.repository_owner}}
+          domain: ${{github.repository_owner}}.${{ inputs.domain}}
       - name: Testspace push test content
         run: testspace "[${{ github.workflow }}/${{ github.job }}]./testcontent/*.xml"
   job7:
@@ -75,7 +73,7 @@ jobs:
       - name: Testspace client install & config
         uses: testspace-com/setup-testspace@v1
         with:
-          domain: ${{github.repository_owner}}
+          domain: ${{github.repository_owner}}.${{ inputs.domain}}
       - name: Testspace push test content
         run: testspace "[${{ github.workflow }}/${{ github.job }}]./testcontent/*.xml"
   job8:
@@ -85,7 +83,7 @@ jobs:
       - name: Testspace client install & config
         uses: testspace-com/setup-testspace@v1
         with:
-          domain: ${{github.repository_owner}}
+          domain: ${{github.repository_owner}}.${{ inputs.domain}}
       - name: Testspace push test content
         run: testspace "[${{ github.workflow }}/${{ github.job }}]./testcontent/*.xml"                          
   job9:
@@ -95,7 +93,7 @@ jobs:
       - name: Testspace client install & config
         uses: testspace-com/setup-testspace@v1
         with:
-          domain: ${{github.repository_owner}}
+          domain: ${{github.repository_owner}}.${{ inputs.domain}}
       - name: Testspace push test content
         run: testspace "[${{ github.workflow }}/${{ github.job }}]./testcontent/*.xml"
   job10:
@@ -105,7 +103,7 @@ jobs:
       - name: Testspace client install & config
         uses: testspace-com/setup-testspace@v1
         with:
-          domain: ${{github.repository_owner}}
+          domain: ${{github.repository_owner}}.${{ inputs.domain}}
       - name: Testspace push test content
         run: testspace "[${{ github.workflow }}/${{ github.job }}]./testcontent/*.xml"
   job11:
@@ -115,7 +113,7 @@ jobs:
       - name: Testspace client install & config
         uses: testspace-com/setup-testspace@v1
         with:
-          domain: ${{github.repository_owner}}
+          domain: ${{github.repository_owner}}.${{ inputs.domain}}
       - name: Testspace push test content
         run: testspace "[${{ github.workflow }}/${{ github.job }}]./testcontent/*.xml"
   job12:
@@ -125,7 +123,7 @@ jobs:
       - name: Testspace client install & config
         uses: testspace-com/setup-testspace@v1
         with:
-          domain: ${{github.repository_owner}}
+          domain: ${{github.repository_owner}}.${{ inputs.domain}}
       - name: Testspace push test content
         run: testspace "[${{ github.workflow }}/${{ github.job }}]./testcontent/*.xml"
   job13:
@@ -135,7 +133,7 @@ jobs:
       - name: Testspace client install & config
         uses: testspace-com/setup-testspace@v1
         with:
-          domain: ${{github.repository_owner}}
+          domain: ${{github.repository_owner}}.${{ inputs.domain}}
       - name: Testspace push test content
         run: testspace "[${{ github.workflow }}/${{ github.job }}]./testcontent/*.xml"
   job14:
@@ -145,7 +143,7 @@ jobs:
       - name: Testspace client install & config
         uses: testspace-com/setup-testspace@v1
         with:
-          domain: ${{github.repository_owner}}
+          domain: ${{github.repository_owner}}.${{ inputs.domain}}
       - name: Testspace push test content
         run: testspace "[${{ github.workflow }}/${{ github.job }}]./testcontent/*.xml"
   job15:
@@ -155,7 +153,7 @@ jobs:
       - name: Testspace client install & config
         uses: testspace-com/setup-testspace@v1
         with:
-          domain: ${{github.repository_owner}}
+          domain: ${{github.repository_owner}}.${{ inputs.domain}}
       - name: Testspace push test content
         run: testspace "[${{ github.workflow }}/${{ github.job }}]./testcontent/*.xml"
   job16:
@@ -165,7 +163,7 @@ jobs:
       - name: Testspace client install & config
         uses: testspace-com/setup-testspace@v1
         with:
-          domain: ${{github.repository_owner}}
+          domain: ${{github.repository_owner}}.${{ inputs.domain}}
       - name: Testspace push test content
         run: testspace "[${{ github.workflow }}/${{ github.job }}]./testcontent/*.xml"
   job17:
@@ -175,7 +173,7 @@ jobs:
       - name: Testspace client install & config
         uses: testspace-com/setup-testspace@v1
         with:
-          domain: ${{github.repository_owner}}
+          domain: ${{github.repository_owner}}.${{ inputs.domain}}
       - name: Testspace push test content
         run: testspace "[${{ github.workflow }}/${{ github.job }}]./testcontent/*.xml"
   job18:
@@ -185,7 +183,7 @@ jobs:
       - name: Testspace client install & config
         uses: testspace-com/setup-testspace@v1
         with:
-          domain: ${{github.repository_owner}}
+          domain: ${{github.repository_owner}}.${{ inputs.domain}}
       - name: Testspace push test content
         run: testspace "[${{ github.workflow }}/${{ github.job }}]./testcontent/*.xml"
   job19:
@@ -195,7 +193,7 @@ jobs:
       - name: Testspace client install & config
         uses: testspace-com/setup-testspace@v1
         with:
-          domain: ${{github.repository_owner}}
+          domain: ${{github.repository_owner}}.${{ inputs.domain}}
       - name: Testspace push test content
         run: testspace "[${{ github.workflow }}/${{ github.job }}]./testcontent/*.xml"                          
   job20:
@@ -205,7 +203,7 @@ jobs:
       - name: Testspace client install & config
         uses: testspace-com/setup-testspace@v1
         with:
-          domain: ${{github.repository_owner}}
+          domain: ${{github.repository_owner}}.${{ inputs.domain}}
       - name: Testspace push test content
         run: testspace "[${{ github.workflow }}/${{ github.job }}]./testcontent/*.xml"
   job21:
@@ -215,7 +213,7 @@ jobs:
       - name: Testspace client install & config
         uses: testspace-com/setup-testspace@v1
         with:
-          domain: ${{github.repository_owner}}
+          domain: ${{github.repository_owner}}.${{ inputs.domain}}
       - name: Testspace push test content
         run: testspace "[${{ github.workflow }}/${{ github.job }}]./testcontent/*.xml"
   job22:
@@ -225,6 +223,6 @@ jobs:
       - name: Testspace client install & config
         uses: testspace-com/setup-testspace@v1
         with:
-          domain: ${{github.repository_owner}}
+          domain: ${{github.repository_owner}}.${{ inputs.domain}}
       - name: Testspace push test content
         run: testspace "[${{ github.workflow }}/${{ github.job }}]./testcontent/*.xml"         

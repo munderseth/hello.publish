@@ -1,8 +1,9 @@
 name: Yet Another
 on: 
-  push:
-  pull_request:
-    
+  workflow_dispatch:
+    inputs:
+      domain:
+        default: 'testspace.com'
 jobs:
   one-more:
     runs-on: ubuntu-latest
@@ -11,7 +12,7 @@ jobs:
       - name: Testspace client install & config
         uses: testspace-com/setup-testspace@v1
         with:
-          domain: ${{github.repository_owner}}
+          domain: ${{github.repository_owner}}.${{ inputs.domain}}
       - name: Testspace push test content
         run: testspace "[${{ github.workflow }}]./testcontent/*.xml"
   
