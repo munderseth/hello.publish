@@ -1,5 +1,6 @@
 name: Jobs
-on: 
+on:
+  push:
   workflow_dispatch:
     inputs:
       domain:
@@ -218,7 +219,10 @@ jobs:
         with:
           domain: ${{github.repository_owner}}.${{ inputs.domain}}
       - name: Testspace push test content
-        run: testspace "[${{ github.workflow }}/${{ github.job }}]./testcontent/*.xml"
+        run: |
+          echo Sleep for 30
+          sleep 30
+          testspace "[${{ github.workflow }}/${{ github.job }}]./testcontent/*.xml"
   job21:
     runs-on: ubuntu-latest
     steps:
@@ -228,9 +232,13 @@ jobs:
         with:
           domain: ${{github.repository_owner}}.${{ inputs.domain}}
       - name: Testspace push test content
-        run: testspace "[${{ github.workflow }}/${{ github.job }}]./testcontent/*.xml"
+        run: |
+          echo Sleep for 30
+          sleep 30
+          testspace "[${{ github.workflow }}/${{ github.job }}]./testcontent/*.xml"
   job22:
     runs-on: ubuntu-latest
+    needs: [job20, job21]
     steps:
       - uses: actions/checkout@v2
       - name: Testspace client install & config
