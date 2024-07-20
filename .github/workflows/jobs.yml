@@ -220,7 +220,6 @@ jobs:
       - name: Testspace push test content
         run: |
           echo Sleep for 30
-          sleep 30
           testspace "[${{ github.workflow }}/${{ github.job }}]./testcontent/*.xml"
           sleep 30
   job21:
@@ -234,13 +233,13 @@ jobs:
       - name: Testspace push test content
         run: |
           echo Sleep for 30
-          sleep 30
           testspace "[${{ github.workflow }}/${{ github.job }}]./testcontent/*.xml"
           sleep 30
   job22:
     runs-on: ubuntu-latest
     needs: [job20, job21]
     steps:
+      - run: sleep 60
       - uses: actions/checkout@v2
       - name: Testspace client install & config
         uses: testspace-com/setup-testspace@v1
