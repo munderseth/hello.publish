@@ -17,7 +17,7 @@ jobs:
       - name: Testspace push test content
         run: |
           touch github_run.txt
-          echo env >> git_run.txt
+          env >> git_run.txt
           testspace git_run.txt
   this-job:
     runs-on: ubuntu-latest
