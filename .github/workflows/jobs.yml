@@ -14,6 +14,7 @@ jobs:
         uses: testspace-com/setup-testspace@v1
         with:
           domain: http://mark.testspace.test:3000
+          token: tsu_50cec0bac7706c157662bf25e5b1ba89099e8785
       - name: Testspace push test content
         run: |
           touch github_run.txt
